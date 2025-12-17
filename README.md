@@ -1,56 +1,37 @@
-**ocs01-test**
+Dear Dev Team,
 
-rust cli for testing ocs01 smart contract
+I participated in testnet activities and am sharing the following OCS01-test benchmark report covering both regular and encrypted sequential execution.
 
-**what it does**
+**Contributor**
 
--   tests all ocs01 contract methods
--   interactive menu for easy navigation
--   shows results instantly for view methods
--   handles tx signing for call methods
+Wallet: octEsqpLd2zpuqXRnWQ1ez7TsLxpkJD9ZtA9U3HCB6Zxesu
 
-**works on**
+Benchmark Results
 
--   linux
--   macos
--   windows
+1) OCS01 Regular Benchmark
 
-**install rust (if not installed)**
+Start time: 2025-11-25T05:21:03Z
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-```
+End time: 2025-11-25T05:51:10Z
 
-**build from source**
+Total duration: 1807 seconds
 
-```bash
-git clone https://github.com/octra-labs/ocs01-test.git
-cd ocs01-test
-cargo build --release
-```
+Total transactions: 150
 
-**setup**
+Derived TPS: 0.0830
 
-```bash
-# copy contract interface
-cp EI/exec_interface.json .
-```
+SHA-256 (log): 214e6c5f3e04a454823604b957846730abca3edad7247697416ddaeb88bd24f9
 
-**required files in same directory**
+2) OCS01 Encrypted Benchmark
 
--   wallet.json - create with your credentials
--   exec_interface.json - copy from EI/ folder
+Start time: 2025-11-25T05:07:24Z
 
-**run**
+End time: 2025-11-25T05:27:36Z
 
-you must copy the release binary to your cli folder and also copy the EI file (execution interface file) to the same location 
+Total duration: 1212 seconds
 
-the release binary is located in this folder after successful build. 
-```bash
-./target/release/ocs01-test
-```
+Total transactions: 20
 
-*for this task the ei file contains the interface for contract at address octBUHw585BrAMPMLQvGuWx4vqEsybYH9N7a3WNj1WBwrDn, do not modify it*
+Derived TPS: 0.0165
 
-after running, follow the menu to interact with the contract
+SHA-256 (log): fa564e86fd5e85c7a814ee11c9cd36d6408728b265a2a25a5a05cc6acc73d3cf
